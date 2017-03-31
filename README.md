@@ -1,6 +1,6 @@
 # File-uploader-react
 This is component helps you to build a file uploader very easily.
-You just need to habe a file input in your application and give a file to [File uploader](https://github.com/Ggayane/react-file-loader) component and it will done the "durty" work for you ;)
+You just need to habe a file input in your application and give a file to [File uploader](https://github.com/Ggayane/react-file-loader) component and it will done the "durty" work for you :smirk:
 
 ## How to get started ?
 
