@@ -5,9 +5,13 @@ You just need to habe a file input in your application and give a file to [File 
 ## How to get started ?
 
 #### Install
-`npm install`
+```
+npm install
+```
 #### Start
-`npm start`
+```
+npm start
+```
 
 ## Installation
 
@@ -33,4 +37,3 @@ see more in [examples](https://github.com/Ggayane/react-file-loader/tree/master/
 ## Screenshot
 
 ![0.0.1](https://media.giphy.com/media/kkx4J09GMcZLa/giphy.gif)
-
