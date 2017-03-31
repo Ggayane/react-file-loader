@@ -1,0 +1,103 @@
+$background: lightblue;
+$wrapperColor: #e4e2e2;
+$progressBG: #00BCD4;
+$statusBG: #CDDC39;
+$errorColor: #F44336;
+$failedColor: #9E9E9E;
+$canceledColor: #FFC107;
+
+
+body {
+  background: $background;
+  font-family: "Helvetica Neue", serif;
+}
+
+.file_progress-wrapper {
+  height: 20px;
+  margin-bottom: 20px;
+  background-color: $wrapperColor;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+  margin-top: 45px;
+}
+
+.file_progress {
+  width: 12%;
+  background: $progressBG;
+  position: relative;
+  height: 20px;
+  transition: all .5s;
+  border-radius: 4px;
+}
+
+.file_progress-status {
+  display: block;
+  position: absolute;
+  right: -37px;
+  background: $statusBG;
+  color: #fff;
+  top: -35px;
+  width: 74px;
+  text-align: center;
+  padding: 5px;
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+  transition: all .5s;
+  transform: rotateY(90deg);
+  text-transform: capitalize;
+  font-size: 15px;
+  border-radius: 4px;
+}
+
+.file_progress-status.show {
+  transform: rotateY(360deg);
+}
+
+.file_progress-status.finished {
+  transform: rotateY(0deg);
+  &.error { background: $errorColor;
+    &:after {border-top: 5px solid $errorColor;}
+  }
+  &.failed { background: $failedColor;
+    &:after {border-top: 5px solid $failedColor;}
+  }
+  &.canceled { background: $canceledColor;
+    &:after {border-top: 5px solid $canceledColor;}
+  }
+}
+
+.file_progress-status:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid $statusBG;
+  bottom: -5px;
+  left: 32px;
+}
+
+.cancel_btn-wrapper { width: 100%; text-align: center; margin-top: 10px;
+  .cancel_btn {
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 0.9em;
+    background-color: #fff;
+    color: #646464;
+    background-color: #eee;
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    padding: 5px 10px;
+    outline: none;
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
+
+.error_msg {
+  color: $errorColor;
+}
