@@ -44,6 +44,7 @@ see more in [examples](https://github.com/Ggayane/react-file-loader/tree/master/
 | **requestSuccessVal?** | | string | successfully upload response param value  |
 | **validFileTypes?** | ['image/jpeg', 'image/png', 'video/mp4'] | array | valid file types |
 | **fileMaxSize?** | 1024 | number | uploaded file maximum size |
+| **preventReload?** | false | boolean | show alert dialog on page reload while file is uploading |
 
 ## Screenshot
 
