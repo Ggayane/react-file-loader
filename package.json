@@ -1,6 +1,6 @@
 {
   "name": "react-file-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "File Loader Component",
   "scripts": {
     "start": "node server.js",
@@ -21,9 +21,9 @@
   "author": "Gayane Gasparyan (http://github.com/Ggayane)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gaearon/react-hot-boilerplate/issues"
+    "url": "https://github.com/Ggayane/react-file-loader/issues"
   },
-  "homepage": "https://github.com/gaearon/react-hot-boilerplate",
+  "homepage": "https://github.com/Ggayane/react-file-loader",
   "devDependencies": {
     "babel-core": "^6.0.20",
     "babel-eslint": "^4.1.3",
