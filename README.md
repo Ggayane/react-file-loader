@@ -30,9 +30,20 @@ import FileLoader from 'react-input-validation';
   file={this.state.file || null}
   requestSuccessParam='status'
   requestSuccessVal='ok'
-  url={'you link here'} />
+  url={'your link here'} />
 ```
 see more in [examples](https://github.com/Ggayane/react-file-loader/tree/master/examples)
+
+## Props
+
+| Name | Default | Type | Description |
+|------|---------|------|-------------|
+| **file?** | | object | uploaded file |
+| **url?** | | string | url to upload a file |
+| **requestSuccessParam?** | | string | uploaded response param for checking |
+| **requestSuccessVal?** | | string | successfully upload response param value  |
+| **validFileTypes?** | ['image/jpeg', 'image/png', 'video/mp4'] | array | valid file types |
+| **fileMaxSize?** | 1024 | number | uploaded file maximum size |
 
 ## Screenshot
 
