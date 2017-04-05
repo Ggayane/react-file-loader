@@ -1,6 +1,6 @@
 {
   "name": "react-file-loader",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "File Loader Component",
   "scripts": {
     "start": "node server.js",
