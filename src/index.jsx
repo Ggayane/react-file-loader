@@ -32,7 +32,7 @@ export default class FileLoader extends Component {
   }
 
   uploadFile (file, url) {
-    const { requestSuccessParam, requestSuccessVal, preventReload } = this.props
+    const { requestSuccessParam, requestSuccessVal, preventReload, uploadFinishedCallback } = this.props
     if (preventReload) {
       addFileLoaderListener()
     }
@@ -44,8 +44,10 @@ export default class FileLoader extends Component {
     req.open('POST', url)
 
     req.addEventListener('load', (e) => {
-      console.log(req)
       const uploadStatus = JSON.parse(req.response)[requestSuccessParam] === requestSuccessVal ? 'done' : 'error'
+      if (uploadFinishedCallback) {
+        uploadFinishedCallback()
+      }
       this.uploadFinished({uploaded: true, uploadStatus})
     }, false)
 
@@ -55,7 +57,6 @@ export default class FileLoader extends Component {
 
     req.upload.addEventListener('progress', (e) => {
       const percentage = parseInt((e.loaded / e.total) * 100, 10)
-        console.log(percentage)
       this.setUploadedPercentage(percentage)
     }, false)
 
@@ -173,7 +174,8 @@ FileLoader.propTypes = {
   requestSuccessParam: React.PropTypes.string.isRequired,
   requestSuccessVal: React.PropTypes.string.isRequired,
   validFileTypes: React.PropTypes.array,
-  fileMaxSize: React.PropTypes.number
+  fileMaxSize: React.PropTypes.number,
+  uploadFinishedCallback: React.PropTypes.func
 }
 
 FileLoader.defaultProps = {

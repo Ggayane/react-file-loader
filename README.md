@@ -1,6 +1,6 @@
 # File-uploader-react
 This is component helps you to build a file uploader very easily.
-You just need to habe a file input in your application and give a file to [File uploader](https://github.com/Ggayane/react-file-loader) component and it will done the "durty" work for you :smirk:
+You just need to have a file input in your application and give a file to [File uploader](https://github.com/Ggayane/react-file-loader) component and it will done the "dirty" work for you :smirk:
 
 ## How to get started ?
 
@@ -45,6 +45,7 @@ see more in [examples](https://github.com/Ggayane/react-file-loader/tree/master/
 | **requestSuccessVal?** | | string | successfully upload response param value  |
 | **validFileTypes?** | ['image/jpeg', 'image/png', 'video/mp4'] | array | valid file types |
 | **fileMaxSize?** | 1024 | number | uploaded file maximum size |
+| **uploadFinishedCallback?** | | function | function to call after file upload is done |
 
 ## Screenshot
 
