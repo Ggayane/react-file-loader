@@ -46,6 +46,7 @@ see more in [examples](https://github.com/Ggayane/react-file-loader/tree/master/
 | **validFileTypes?** | ['image/jpeg', 'image/png', 'video/mp4'] | array | valid file types |
 | **fileMaxSize?** | 1024 | number | uploaded file maximum size |
 | **uploadFinishedCallback?** | | function | function to call after file upload is done |
+| **additionalData?** | | object | additional data to send with the file: {firstName: 'John'} |
 
 ## Screenshot
 

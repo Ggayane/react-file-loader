@@ -32,7 +32,7 @@ export default class FileLoader extends Component {
   }
 
   uploadFile (file, url) {
-    const { requestSuccessParam, requestSuccessVal, preventReload, uploadFinishedCallback } = this.props
+    const { requestSuccessParam, requestSuccessVal, preventReload, uploadFinishedCallback, additionalData } = this.props
     if (preventReload) {
       addFileLoaderListener()
     }
@@ -40,7 +40,16 @@ export default class FileLoader extends Component {
 
     const formData = new FormData()
     formData.append('files', file)
+    if (additionalData) {
+      for (const param in additionalData) {
+        if (param) {
+          const val = additionalData[param]
+          formData.append(param, val)
+        }
+      }
+    }
     const req = new XMLHttpRequest()
+    req.withCredentials = true
     req.open('POST', url)
 
     req.addEventListener('load', (e) => {
@@ -175,7 +184,8 @@ FileLoader.propTypes = {
   requestSuccessVal: React.PropTypes.string.isRequired,
   validFileTypes: React.PropTypes.array,
   fileMaxSize: React.PropTypes.number,
-  uploadFinishedCallback: React.PropTypes.func
+  uploadFinishedCallback: React.PropTypes.func,
+  additionalData: React.PropTypes.object
 }
 
 FileLoader.defaultProps = {

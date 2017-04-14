@@ -23,7 +23,7 @@ export default class App extends Component {
           file={this.state.file || null}
           requestSuccessParam='status'
           requestSuccessVal='ok'
-          url='http://t.renderforest.com:3000/api/v1/usermedia/' />
+          url='#' />
       </div>
     )
   }
