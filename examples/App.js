@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import FileLoader from '../src/index.jsx'
+import FileLoader from '../src/index.js'
 
 export default class App extends Component {
   constructor (props) {
