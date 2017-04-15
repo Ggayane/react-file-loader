@@ -49,7 +49,6 @@ export default class FileLoader extends Component {
       }
     }
     const req = new XMLHttpRequest()
-    req.withCredentials = true
     req.open('POST', url)
 
     req.addEventListener('load', (e) => {
