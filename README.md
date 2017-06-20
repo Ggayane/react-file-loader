@@ -24,7 +24,7 @@ npm install react-file-loader --save
 ## Usage
 
 ```jsx
-import FileLoader from 'react-input-validation';
+import FileLoader from 'react-file-loader';
 
 <FileLoader
   file={this.state.file || null}
